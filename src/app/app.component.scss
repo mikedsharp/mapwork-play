@@ -1,0 +1,62 @@
+$title-bar-height: 48px;
+$sidebar-colour: #222;
+$canvas-area-colour: #fff;
+$title-bar-background-colour: #005B9A;
+$title-bar-text-colour: #eee;
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+
+*{
+  box-sizing: border-box !important;
+}
+
+.parent{
+  display: flex;
+  flex-grow: 1;
+  height: calc(100vh - #{$title-bar-height} );
+  flex-direction: row;
+  background-color: green;
+}
+
+.sideitem {
+  width: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /*horiztonal*/
+  justify-content: center; /*Vertical*/
+  background-color: $sidebar-colour;
+}
+
+.centreitem{
+  flex-grow: 1;
+  align-content: stretch;
+  background-color: $canvas-area-colour;
+  display: flex;
+
+  canvas{
+    width: 100%;
+  }
+}
+
+.square{
+  width: 48px;
+  height: 48px;
+  margin: 5px 0;
+  background-color: purple;
+}
+
+.titlebar{
+  background-color: $title-bar-background-colour;
+  height: $title-bar-height;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2{
+    padding: 0;
+    margin: 0;
+    color: $title-bar-text-colour;
+    font-family: 'Open Sans', sans-serif;
+  }
+}

@@ -1,0 +1,47 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+* {
+  box-sizing: border-box !important; }
+
+.parent {
+  display: flex;
+  flex-grow: 1;
+  height: calc(100vh - 48px );
+  flex-direction: row;
+  background-color: green; }
+
+.sideitem {
+  width: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*horiztonal*/
+  justify-content: center;
+  /*Vertical*/
+  background-color: #222222; }
+
+.centreitem {
+  flex-grow: 1;
+  align-content: stretch;
+  background-color: white;
+  display: flex; }
+  .centreitem canvas {
+    width: 100%; }
+
+.square {
+  width: 48px;
+  height: 48px;
+  margin: 5px 0;
+  background-color: purple; }
+
+.titlebar {
+  background-color: #005b9a;
+  height: 48px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .titlebar h2 {
+    padding: 0;
+    margin: 0;
+    color: #eeeeee;
+    font-family: 'Open Sans', sans-serif; }
